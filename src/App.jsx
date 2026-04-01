@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import History from './pages/History/History';
+import OAuthCallback from './pages/Auth/OAuthCallback';
 import { authService } from './services/authService';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={isLoggedIn ? <Navigate to="/history" /> : <Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/auth/callback" element={<OAuthCallback onLogin={handleLogin} />} />
           <Route path="/history" element={isLoggedIn ? <History /> : <Navigate to="/login" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
