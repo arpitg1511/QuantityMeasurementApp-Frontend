@@ -65,33 +65,6 @@ const Login = ({ onLogin }) => {
             </Button>
           </form>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', margin: '1.5rem 0' }}>
-            <div style={{ flex: 1, height: '1px', background: 'var(--glass-border)' }} />
-            <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>OR</span>
-            <div style={{ flex: 1, height: '1px', background: 'var(--glass-border)' }} />
-          </div>
-
-          <button 
-            onClick={() => window.location.href = 'http://localhost:8080/oauth2/authorization/google'}
-            style={{ 
-              width: '100%', 
-              height: '3.5rem', 
-              borderRadius: '0.75rem', 
-              border: '1px solid var(--glass-border)',
-              background: 'var(--surface)',
-              color: 'var(--text)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.75rem',
-              cursor: 'pointer',
-              fontWeight: 600,
-              transition: 'all 0.2s'
-            }}
-          >
-            <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google" style={{ width: '20px' }} />
-            Continue with Google
-          </button>
           <p style={{ marginTop: '1.5rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
             Don't have an account? <Link to="/register" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 }}>Sign up</Link>
           </p>
