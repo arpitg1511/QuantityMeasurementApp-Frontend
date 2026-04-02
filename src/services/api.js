@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://quantitymeasurementapp-production-5c8d.up.railway.app/api/v1/quantities';
+const API_BASE_URL = 'http://localhost:8080/api/v1/quantities';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
